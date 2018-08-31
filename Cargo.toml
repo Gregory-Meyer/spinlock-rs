@@ -1,0 +1,6 @@
+[package]
+name = "spinlock"
+version = "0.1.0"
+authors = ["Gregory Meyer <gregjm@umich.edu>"]
+
+[dependencies]

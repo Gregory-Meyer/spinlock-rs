@@ -9,8 +9,8 @@ pub struct Spinlock<T: ?Sized> {
 impl<T> Spinlock<T> {
     pub fn new(t: T) -> Spinlock<T> {
         Spinlock {
-            is_locked: std::sync::atomic::AtomicBool::new(false),
-            is_poisoned: std::sync::atomic::AtomicBool::new(false),
+            is_locked: std::sync::atomic::ATOMIC_BOOL_INIT,
+            is_poisoned: std::sync::atomic::ATOMIC_BOOL_INIT,
             data: std::cell::UnsafeCell::new(t),
         }
     }
